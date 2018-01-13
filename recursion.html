@@ -10,10 +10,11 @@
 <p>*Decimals will be rounded to the nearest integer</p>
 <input id="numberInput" type="text" name="" value="">
 <button onclick="handleClick()">Get Factorial</button>
-<p id="placeholder"></p>
+<p>Input (rounded): <span id="userInput"></span></p>
+<p>Factorial Total = <span id="placeholder"></span></p>
+<p>Factorial Math: <span id="mathematics"></span></p>
 
 <script type="text/javascript">
-
 function factorial(n) {
     // If the number is less than 0, reject it.
     if (n < 0) {
@@ -28,16 +29,25 @@ function factorial(n) {
         return (n * factorial(n - 1));
     }
 }
-
 function handleClick() {
   var num = document.getElementById('numberInput').value;
   var integer = Math.round(num);
-
   var result = factorial(integer);
   document.getElementById("placeholder").innerHTML = result;
+
+  var factoring = "";
+  var i;
+  for (i = 1; i <= integer; i++) {
+      if (i != integer) {
+        factoring += i + " * ";
+      } else {
+        factoring += i;
+      }
+  };
+  document.getElementById("mathematics").innerHTML = factoring;
+
+  document.getElementById("userInput").innerHTML = integer;
 }
-
-
 </script>
 
 
