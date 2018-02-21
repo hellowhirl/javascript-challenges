@@ -5,7 +5,7 @@ My own personal homework assignments for solidifying my understanding in JavaScr
 (1) Recursion
 
 
-## (1) Recursion - recrusion.html
+## (1) Recursion - recursion.html
 
 Recursion is a concept that is used often in programming. What it's basically doing is *calling a function on itself*.
 
@@ -34,3 +34,14 @@ Status: complete
 New stuff I learned:
 * Object.setPrototypeOf() [not really used in real world cases though..]
 * console.log from the command line: node (filename).js
+
+
+## (3) The 'new' keyword - new-object.js
+
+So this is what's happening underneath the hood for when a new object is created using 'new.'
+There are 4 things that happen with 'new' when it is applied to functions.
+
+Step 1) Create a new object
+Step 2) Set the prototype
+Step 3) Execute the constructor with 'this' set to the object created in Step 1
+Step 4) Return the created object (with some edge case exception)
