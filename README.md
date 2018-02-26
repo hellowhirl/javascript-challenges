@@ -45,3 +45,21 @@ Step 1) Create a new object
 Step 2) Set the prototype
 Step 3) Execute the constructor with 'this' set to the object created in Step 1
 Step 4) Return the created object (with some edge case exception)
+
+Status: complete
+
+New stuff I learned:
+* within a function we can use console.log(arguments) to see all the arguments/parameters that are contained in the Object
+
+
+## (4) Object.create() - objectcreate-example.js
+
+Object.create() is a static method on the object prototype. It creates a new object with the prototype set to (setPrototypeOf is under the hood) a certain object (whatever is in the parentheses). I see prototypes as a way of carrying over properties (making references) from objects to other objects.
+
+
+Status:
+
+New stuff I learned:
+* From a performance standpoint we shouldn't use setPrototypeOf in real projects; instead we should use Object.create()
+* It's common to make your own 'init' function which will be used for constructor logic outside of Object.create()
+* You can chain stuff together with init if you return 'this' inside of its function
